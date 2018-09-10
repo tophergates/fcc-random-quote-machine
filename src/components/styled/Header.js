@@ -17,7 +17,7 @@ const Logo = styled.span`
   background-size: cover;
   border: 0;
   border-radius: 0.85rem;
-  clip-path: polygon(5% 5%, 100% 0%, 100% 80%, 75% 80%, 80% 100%, 50% 80%, 0% 80%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 75% 80%, 80% 100%, 50% 80%, 0% 80%);
   height: 2.5rem;
   position: absolute;
   top: 0;
