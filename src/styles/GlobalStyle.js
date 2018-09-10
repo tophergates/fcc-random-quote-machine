@@ -34,14 +34,17 @@ const GlobalStyle = createGlobalStyle`
     font-size: 160%;
     line-height: 1.8;
     min-width: 320px;
+    position: relative;
     transition: background 0.5s ease-out;
   }
 
   .appWrapper {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     left: 50%;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
+    user-select: none;
     width: 100%;
     
     @media screen and (min-width: 480px) {

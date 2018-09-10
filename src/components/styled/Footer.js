@@ -2,11 +2,17 @@ import styled from 'styled-components';
 import { darken, lighten, readableColor } from 'polished';
 
 const Footer = styled.footer`
+  float: right;
   margin: 0 2rem;
-  min-width: 28rem;
   padding: 0.85rem 1rem 0 1rem;
   position: relative;
-  z-index: -1;
+  width: 20rem;
+
+  @media screen and (min-width: 480px) {
+    float: none;
+    min-width: 28rem;
+    width: auto;
+  }
 
   p {
     backface-visibility: hidden;

@@ -18,6 +18,7 @@ const QuoteContainer = styled.main`
   min-width: 28rem;
   position: relative;
   transition: background 0.5s ease-in, opacity 0.25s ease-out;
+  user-select: text;
 `;
 
 export default QuoteContainer;
