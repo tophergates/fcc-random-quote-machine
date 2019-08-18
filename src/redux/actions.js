@@ -1,15 +1,19 @@
 import randomColor from 'randomcolor';
-import { QUOTE__FETCHING, QUOTE__FETCH_SUCCESS, QUOTE__FETCH_ERROR } from './actionTypes';
+import {
+  QUOTE__FETCHING,
+  QUOTE__FETCH_SUCCESS,
+  QUOTE__FETCH_ERROR
+} from './actionTypes';
 
 const fetchingQuote = () => ({
   type: QUOTE__FETCHING
 });
 
-const fetchSuccess = ({ quote: text, author, cat: category }) => ({
+const fetchSuccess = ({ content: text, author }) => ({
   type: QUOTE__FETCH_SUCCESS,
   payload: {
     background: randomColor(),
-    quote: { text, author, category }
+    quote: { text, author }
   }
 });
 
@@ -22,7 +26,8 @@ const fetchError = ({ message }) => ({
 });
 
 const getQuote = () => async dispatch => {
-  const API_URL = 'https://talaikis.com/api/quotes/random/';
+  // const API_URL = 'https://talaikis.com/api/quotes/random/'; // no longer working :(
+  const API_URL = 'https://api.quotable.io/random'; // Credit: Luke Peavey; https://github.com/lukePeavey/quotable#get-random-quote
 
   try {
     dispatch(fetchingQuote());

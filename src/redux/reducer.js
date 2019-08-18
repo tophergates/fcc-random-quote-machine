@@ -1,4 +1,8 @@
-import { QUOTE__FETCHING, QUOTE__FETCH_SUCCESS, QUOTE__FETCH_ERROR } from './actionTypes';
+import {
+  QUOTE__FETCHING,
+  QUOTE__FETCH_SUCCESS,
+  QUOTE__FETCH_ERROR
+} from './actionTypes';
 
 export default (state = {}, { type, payload }) => {
   switch (type) {
